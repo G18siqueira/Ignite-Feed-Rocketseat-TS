@@ -1,0 +1,12 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.wrapper {
+  display: grid;
+  gap: 2rem;
+  
+  @include device-up(lg) {
+    grid-template-columns: 16rem 1fr;
+    align-items: flex-start;
+  }
+}

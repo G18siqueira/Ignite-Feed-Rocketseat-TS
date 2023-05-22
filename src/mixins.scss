@@ -1,0 +1,53 @@
+@import './variables.scss';
+
+@mixin device-up($device) {
+    @if $device==xl {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @if $device==lg {
+        @media only screen and (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @if $device==md {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $device==sm {
+        @media only screen and (min-width: 576px) {
+            @content;
+        }
+    }
+}
+
+@mixin device-down($device) {
+    @if $device==xl {
+        @media only screen and (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @if $device==lg {
+        @media only screen and (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @if $device==md {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $device==sm {
+        @media only screen and (max-width: 576px) {
+            @content;
+        }
+    }
+}
